@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "secrets1": {
+      "type": "secrets"
+    },
+    "mssql1": {
+      "type": "mssql",
+      "connectionId": "ConnectionStrings:ContextConnection",
+      "dynamicId": null
+    },
+    "ConnectionStrings": {
+      "DefaultConnection": "Server=localhost;Database=hotelbooking;User=root;Password=Munmeo0503.;"
+    }
+  }
+} 
