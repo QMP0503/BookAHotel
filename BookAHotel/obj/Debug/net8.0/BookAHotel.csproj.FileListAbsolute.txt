@@ -1,3 +1,4 @@
+C:\Users\intern.pmquang1\C#\BookAHotel\BookAHotel\bin\Debug\net8.0\Logs\log4net.config
 C:\Users\intern.pmquang1\C#\BookAHotel\BookAHotel\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\intern.pmquang1\C#\BookAHotel\BookAHotel\bin\Debug\net8.0\appsettings.json
 C:\Users\intern.pmquang1\C#\BookAHotel\BookAHotel\bin\Debug\net8.0\BookAHotel.exe
@@ -115,6 +116,7 @@ C:\Users\intern.pmquang1\C#\BookAHotel\BookAHotel\obj\Debug\net8.0\BookAHotel.As
 C:\Users\intern.pmquang1\C#\BookAHotel\BookAHotel\obj\Debug\net8.0\BookAHotel.csproj.CoreCompileInputs.cache
 C:\Users\intern.pmquang1\C#\BookAHotel\BookAHotel\obj\Debug\net8.0\BookAHotel.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\intern.pmquang1\C#\BookAHotel\BookAHotel\obj\Debug\net8.0\BookAHotel.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\intern.pmquang1\C#\BookAHotel\BookAHotel\obj\Debug\net8.0\BookAHotel.sourcelink.json
 C:\Users\intern.pmquang1\C#\BookAHotel\BookAHotel\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\intern.pmquang1\C#\BookAHotel\BookAHotel\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\intern.pmquang1\C#\BookAHotel\BookAHotel\obj\Debug\net8.0\staticwebassets\msbuild.BookAHotel.Microsoft.AspNetCore.StaticWebAssets.props
@@ -129,4 +131,3 @@ C:\Users\intern.pmquang1\C#\BookAHotel\BookAHotel\obj\Debug\net8.0\refint\BookAH
 C:\Users\intern.pmquang1\C#\BookAHotel\BookAHotel\obj\Debug\net8.0\BookAHotel.pdb
 C:\Users\intern.pmquang1\C#\BookAHotel\BookAHotel\obj\Debug\net8.0\BookAHotel.genruntimeconfig.cache
 C:\Users\intern.pmquang1\C#\BookAHotel\BookAHotel\obj\Debug\net8.0\ref\BookAHotel.dll
-C:\Users\intern.pmquang1\C#\BookAHotel\BookAHotel\bin\Debug\net8.0\Logs\log4net.config

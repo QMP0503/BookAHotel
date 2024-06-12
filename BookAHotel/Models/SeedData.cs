@@ -12,6 +12,28 @@ namespace BookAHotel.Models
                 serviceProvider.GetRequiredService<
                     DbContextOptions<HotelBookingContext>>()))
             {
+                //context.RoomTypes.AddRange(
+                //    new RoomType
+                //    {
+                //        RoomTypeName = RoomTypeNameEnum.Normal,
+                //        Price = 50
+                //    },
+                //    new RoomType
+                //    {
+                //        RoomTypeName = RoomTypeNameEnum.Queen,
+                //        Price = 80
+                //    },
+                //    new RoomType
+                //    {
+                //        RoomTypeName = RoomTypeNameEnum.King,
+                //        Price = 120
+                //    },
+                //    new RoomType
+                //    {
+                //        RoomTypeName = RoomTypeNameEnum.President,
+                //        Price = 200
+                //    });
+                //context.SaveChanges();
                 return;
             }
             

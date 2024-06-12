@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 using MySql.EntityFrameworkCore.Metadata;
 
 #nullable disable
@@ -21,7 +22,7 @@ namespace BookAHotel.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
                     Name = table.Column<string>(type: "varchar(255)", nullable: false),
-                    HasBooking = table.Column<bool>(type: "tinyint(1)", nullable: false)
+                    Status = table.Column<string>(type: "longtext", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -52,8 +53,7 @@ namespace BookAHotel.Migrations
                         .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
                     Name = table.Column<string>(type: "longtext", nullable: false),
                     IsAvailable = table.Column<bool>(type: "tinyint(1)", nullable: false),
-                    RoomTypeId = table.Column<int>(type: "int", nullable: false),
-                    TotalPrice = table.Column<int>(type: "int", nullable: false)
+                    RoomTypeId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -68,25 +68,29 @@ namespace BookAHotel.Migrations
                 .Annotation("MySQL:Charset", "utf8mb4");
 
             migrationBuilder.CreateTable(
-                name: "ClientRooms",
+                name: "Bookings",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
                     ClientId = table.Column<int>(type: "int", nullable: false),
-                    RoomId = table.Column<int>(type: "int", nullable: false)
+                    RoomId = table.Column<int>(type: "int", nullable: false),
+                    startDate = table.Column<DateTime>(type: "datetime(6)", nullable: false),
+                    endDate = table.Column<DateTime>(type: "datetime(6)", nullable: false),
+                    TotalPrice = table.Column<double>(type: "double", nullable: false),
+                    Status = table.Column<string>(type: "longtext", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ClientRooms", x => x.Id);
+                    table.PrimaryKey("PK_Bookings", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_ClientRooms_Clients_ClientId",
+                        name: "FK_Bookings_Clients_ClientId",
                         column: x => x.ClientId,
                         principalTable: "Clients",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_ClientRooms_Rooms_RoomId",
+                        name: "FK_Bookings_Rooms_RoomId",
                         column: x => x.RoomId,
                         principalTable: "Rooms",
                         principalColumn: "Id",
@@ -95,13 +99,13 @@ namespace BookAHotel.Migrations
                 .Annotation("MySQL:Charset", "utf8mb4");
 
             migrationBuilder.CreateIndex(
-                name: "IX_ClientRooms_ClientId",
-                table: "ClientRooms",
+                name: "IX_Bookings_ClientId",
+                table: "Bookings",
                 column: "ClientId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_ClientRooms_RoomId",
-                table: "ClientRooms",
+                name: "IX_Bookings_RoomId",
+                table: "Bookings",
                 column: "RoomId");
 
             migrationBuilder.CreateIndex(
@@ -120,7 +124,7 @@ namespace BookAHotel.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "ClientRooms");
+                name: "Bookings");
 
             migrationBuilder.DropTable(
                 name: "Clients");

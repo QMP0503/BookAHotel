@@ -46,8 +46,15 @@ namespace BookAHotel.Data
                 .HasForeignKey(r => r.RoomTypeId)
                 .IsRequired(true)
                 .OnDelete(DeleteBehavior.Cascade);
-                
+            modelBuilder.Entity<Room>()
+                .HasOne(r => r.RoomType)
+                .WithMany(rt => rt.Rooms)
+                .HasForeignKey(r => r.RoomTypeId)
+                .IsRequired(true)
+                .OnDelete(DeleteBehavior.Cascade);
         }
+                
+        
 
 
     }

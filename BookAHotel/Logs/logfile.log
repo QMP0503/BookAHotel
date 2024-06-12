@@ -1,1 +1,31 @@
 ﻿2024-06-11 17:02:46,071 [5] INFO  Program - Microsoft.AspNetCore.Mvc.JsonResult
+2024-06-11 17:49:17,166 [10] INFO  Program - BookAHotel.ViewModel.ClientBookingVM
+2024-06-12 14:21:30,985 [9] ERROR Program - Booking not found
+2024-06-12 14:25:47,445 [5] ERROR Program - jacknot found. Invalid value entered
+2024-06-12 15:00:37,733 [7] ERROR Program - Value cannot be null. (Parameter 'value')
+2024-06-12 16:48:07,129 [3] ERROR Program - Could not save changes. Please configure your entity type accordingly.
+2024-06-12 16:50:57,164 [5] ERROR Program - Could not save changes. Please configure your entity type accordingly.
+2024-06-12 16:53:26,627 [9] ERROR Program - Could not save changes. Please configure your entity type accordingly.
+2024-06-12 17:00:15,545 [9] ERROR Program - Could not save changes. Please configure your entity type accordingly.
+2024-06-12 17:12:43,803 [17] ERROR Program - Object reference not set to an instance of an object.
+2024-06-12 17:14:56,035 [5] ERROR Program - Quangnot found. Invalid value entered
+2024-06-12 17:33:38,993 [7] ERROR Program - Could not save changes. Please configure your entity type accordingly.
+2024-06-12 17:38:22,151 [9] ERROR Program - Could not save changes. Please configure your entity type accordingly.
+2024-06-12 18:10:45,311 [17] ERROR Program - The LINQ expression 'DbSet<Room>()
+    .Join(
+        inner: DbSet<RoomType>(), 
+        outerKeySelector: r => EF.Property<int?>(r, "RoomTypeId"), 
+        innerKeySelector: r1 => EF.Property<int?>(r1, "Id"), 
+        resultSelector: (o, i) => new TransparentIdentifier<Room, RoomType>(
+            Outer = o, 
+            Inner = i
+        ))
+    .Join(
+        inner: DbSet<RoomType>(), 
+        outerKeySelector: r => (object)r.Inner.Id, 
+        innerKeySelector: r0 => (object)r0.Id, 
+        resultSelector: (r, r0) => new TransparentIdentifier<TransparentIdentifier<Room, RoomType>, RoomType>(
+            Outer = r, 
+            Inner = r0
+        ))
+    .Where(ti => Invoke(__predicate_0, ti.Outer.Outer))' could not be translated. Either rewrite the query in a form that can be translated, or switch to client evaluation explicitly by inserting a call to 'AsEnumerable', 'AsAsyncEnumerable', 'ToList', or 'ToListAsync'. See https://go.microsoft.com/fwlink/?linkid=2101038 for more information.

@@ -31,14 +31,18 @@ namespace BookAHotel.Migrations
                     b.Property<int>("RoomId")
                         .HasColumnType("int");
 
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
                     b.Property<double>("TotalPrice")
                         .HasColumnType("double");
 
-                    b.Property<DateOnly>("endDate")
-                        .HasColumnType("date");
+                    b.Property<DateTime>("endDate")
+                        .HasColumnType("datetime(6)");
 
-                    b.Property<DateOnly>("startDate")
-                        .HasColumnType("date");
+                    b.Property<DateTime>("startDate")
+                        .HasColumnType("datetime(6)");
 
                     b.HasKey("Id");
 
@@ -46,7 +50,7 @@ namespace BookAHotel.Migrations
 
                     b.HasIndex("RoomId");
 
-                    b.ToTable("Bookings", (string)null);
+                    b.ToTable("Bookings");
                 });
 
             modelBuilder.Entity("BookAHotel.Models.Client", b =>
@@ -68,7 +72,7 @@ namespace BookAHotel.Migrations
                     b.HasIndex("Name")
                         .IsUnique();
 
-                    b.ToTable("Clients", (string)null);
+                    b.ToTable("Clients");
                 });
 
             modelBuilder.Entity("BookAHotel.Models.Room", b =>
@@ -91,7 +95,7 @@ namespace BookAHotel.Migrations
 
                     b.HasIndex("RoomTypeId");
 
-                    b.ToTable("Rooms", (string)null);
+                    b.ToTable("Rooms");
                 });
 
             modelBuilder.Entity("BookAHotel.Models.RoomType", b =>
@@ -108,7 +112,7 @@ namespace BookAHotel.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("RoomTypes", (string)null);
+                    b.ToTable("RoomTypes");
                 });
 
             modelBuilder.Entity("BookAHotel.Models.Booking", b =>

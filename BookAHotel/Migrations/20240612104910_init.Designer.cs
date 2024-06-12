@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BookAHotel.Migrations
 {
     [DbContext(typeof(HotelBookingContext))]
-    [Migration("20240611033815_ClientStatus")]
-    partial class ClientStatus
+    [Migration("20240612104910_init")]
+    partial class init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -34,11 +34,18 @@ namespace BookAHotel.Migrations
                     b.Property<int>("RoomId")
                         .HasColumnType("int");
 
-                    b.Property<DateOnly>("endDate")
-                        .HasColumnType("date");
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("longtext");
 
-                    b.Property<DateOnly>("startDate")
-                        .HasColumnType("date");
+                    b.Property<double>("TotalPrice")
+                        .HasColumnType("double");
+
+                    b.Property<DateTime>("endDate")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<DateTime>("startDate")
+                        .HasColumnType("datetime(6)");
 
                     b.HasKey("Id");
 
@@ -85,9 +92,6 @@ namespace BookAHotel.Migrations
                         .HasColumnType("longtext");
 
                     b.Property<int>("RoomTypeId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("TotalPrice")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
