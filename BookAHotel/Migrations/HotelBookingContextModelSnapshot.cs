@@ -107,8 +107,9 @@ namespace BookAHotel.Migrations
                     b.Property<int>("Price")
                         .HasColumnType("int");
 
-                    b.Property<int>("RoomTypeName")
-                        .HasColumnType("int");
+                    b.Property<string>("RoomTypeName")
+                        .IsRequired()
+                        .HasColumnType("longtext");
 
                     b.HasKey("Id");
 

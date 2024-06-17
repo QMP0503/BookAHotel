@@ -84,7 +84,7 @@ namespace BookAHotel.Controllers
             try
             {
                 var roomList = _roomService.RoomList(RoomName, RoomType);
-                if (roomList == null)
+                if (roomList == null || roomList.Count == 0)
                 {
                     throw new NullReferenceException(RoomName+ "or" + RoomType + "not found. Invalid value entered");
                 }

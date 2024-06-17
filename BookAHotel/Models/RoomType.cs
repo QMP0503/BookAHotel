@@ -10,10 +10,10 @@
     }
     public enum RoomTypeNameEnum
     {
-        Queen,
-        Normal,
-        King,
-        President,
+        Queen =0,
+        Normal =1,
+        King =2,
+        President=3,
     }
 
 }

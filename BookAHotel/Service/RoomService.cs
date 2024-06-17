@@ -19,9 +19,9 @@ namespace BookAHotel.Service
         public List<Room> RoomList(string? RoomName, string? RoomType) 
         {
             if(RoomName == null && RoomType == null) { return null; }
-            else if(RoomName == null) { return _RoomRepository.ListBy(x => x.RoomType.RoomTypeName.Equals(RoomType)); }
+            else if(RoomName == null) { return _RoomRepository.ListBy(x => x.RoomType.RoomTypeName.ToString().Equals(RoomType)); }
             else if(RoomType == null) { return _RoomRepository.ListBy(x => x.Name.Contains(RoomName)); }
-            return _RoomRepository.ListBy(x => x.Name.Contains(RoomName) && x.RoomType.Equals(RoomType));
+            return _RoomRepository.ListBy(x => x.Name.Contains(RoomName) && x.RoomType.RoomTypeName.ToString().Equals(RoomType));
         }
     }
 }

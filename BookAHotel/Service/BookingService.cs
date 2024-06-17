@@ -23,7 +23,7 @@ namespace BookAHotel.Service
         public Booking FindBooking(string ClientName)
         {
             if (ClientName == null) { throw new NullReferenceException("Client Not Found"); }
-            return _BookingRepository.FindBy(x => x.Client.Name == ClientName);
+            return _BookingRepository.FindBy(x => x.Client.Name == ClientName && x.Status == "Booked");
         }
         public List<Booking> ListBooking(string? RoomName) 
         {
@@ -49,18 +49,20 @@ namespace BookAHotel.Service
                 _RepositoryClient.Add(newClient);
                 client = _ClientRepository.FindBy(x => x.Name == ClientName);
             }
+            client.Status = "Booked";
+            _RepositoryClient.Update(client);
             var booking = new Booking
             {
                 ClientId = client.Id,
                 RoomId = room.Id,
                 startDate = checkIn,
                 endDate = checkOut,
-                TotalPrice = room.RoomType.Price *(1-discount)*1.20, //discount plus VAT
+                TotalPrice = room.RoomType.Price *(1-(discount/100))*1.20, //discount plus VAT
                 Status = "Booked"
             };
             _Repository.Add(booking);
         }
-        public void UpdateBooking(string ClientName, string RoomName, string checkInDate, string checkOutDate)
+        public void UpdateBooking(string ClientName, string? RoomName, string? checkInDate, string? checkOutDate)
         {
             if(ClientName == null || RoomName == null || checkInDate == null || checkOutDate == null) { throw new Exception("Not All Fields are filled"); }
             var checkIn = DateTime.Parse(checkInDate);

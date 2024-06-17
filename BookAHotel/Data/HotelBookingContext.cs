@@ -1,5 +1,6 @@
 ﻿using BookAHotel.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BookAHotel.Data
 {
@@ -15,9 +16,9 @@ namespace BookAHotel.Data
         //one to many with room
         public DbSet<Booking> Bookings { get; set; }
         //Connection for room and client
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+      //  protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 
-      => optionsBuilder.UseMySQL("Server=localhost;Database=hotelbooking;User=root;Password=Munmeo0503.;");
+      //=> optionsBuilder.UseMySQL("Server=localhost;Database=hotelbooking;User=root;Password=Munmeo0503.;");
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)  
@@ -46,12 +47,17 @@ namespace BookAHotel.Data
                 .HasForeignKey(r => r.RoomTypeId)
                 .IsRequired(true)
                 .OnDelete(DeleteBehavior.Cascade);
+
             modelBuilder.Entity<Room>()
                 .HasOne(r => r.RoomType)
                 .WithMany(rt => rt.Rooms)
                 .HasForeignKey(r => r.RoomTypeId)
                 .IsRequired(true)
                 .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<RoomType>()
+                .Property(r => r.RoomTypeName)
+                .HasConversion(new EnumToStringConverter<RoomTypeNameEnum>());
         }
                 
         

@@ -14,16 +14,18 @@ namespace BookAHotel.Repository
         }
         public Room FindBy(Func<Room, bool> predicate)
         {
-                
-            return _context.Rooms.FirstOrDefault(predicate);
+            return FindRoom().FirstOrDefault(predicate);
         }
         public List<Room> ListBy(Func<Room, bool> predicate) 
         {
-
+            return FindRoom().Where(predicate).ToList();
+        }
+        public IQueryable<Room> FindRoom()
+        {
             var rooms = _context.Rooms;
             var RoomTypes = _context.RoomTypes;
 
-            var result = from room in rooms //broken broken
+            var result = from room in rooms
                          join roomType in RoomTypes on room.RoomType.Id equals roomType.Id
                          select new Room
                          {
@@ -31,10 +33,7 @@ namespace BookAHotel.Repository
                              Name = room.Name,
                              RoomType = roomType
                          };
-
-            var t = result.AsQueryable();
-            return result.Where(predicate)
-                .ToList();
+            return result;
         }
     }
 }

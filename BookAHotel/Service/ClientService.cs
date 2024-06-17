@@ -18,7 +18,7 @@ namespace BookAHotel.Service
             var client = new Client
             {
                 Name = name,
-                Status = "Booked"
+                Status = "N/A"
             };
             _Repository.Add(client);
         }
