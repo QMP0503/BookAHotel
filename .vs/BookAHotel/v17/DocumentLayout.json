@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\intern.pmquang1\\C#\\BookAHotel\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0576D535-2229-4D4A-A92B-6671E9929BFF}|BookAHotel.Test\\BookAHotel.Test.csproj|c:\\users\\intern.pmquang1\\c#\\bookahotel\\bookahotel.test\\controller\\bookahotelcontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0576D535-2229-4D4A-A92B-6671E9929BFF}|BookAHotel.Test\\BookAHotel.Test.csproj|solutionrelative:bookahotel.test\\controller\\bookahotelcontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DC21D2E2-601E-4E56-A2BD-8C2341223787}|BookAHotel\\BookAHotel.csproj|c:\\users\\intern.pmquang1\\c#\\bookahotel\\bookahotel\\repository\\irepository\\ifindrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC21D2E2-601E-4E56-A2BD-8C2341223787}|BookAHotel\\BookAHotel.csproj|solutionrelative:bookahotel\\repository\\irepository\\ifindrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DC21D2E2-601E-4E56-A2BD-8C2341223787}|BookAHotel\\BookAHotel.csproj|c:\\users\\intern.pmquang1\\c#\\bookahotel\\bookahotel\\controllers\\bookahotelcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DC21D2E2-601E-4E56-A2BD-8C2341223787}|BookAHotel\\BookAHotel.csproj|solutionrelative:bookahotel\\controllers\\bookahotelcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0576D535-2229-4D4A-A92B-6671E9929BFF}|BookAHotel.Test\\BookAHotel.Test.csproj|c:\\users\\intern.pmquang1\\c#\\bookahotel\\bookahotel.test\\controller\\bookahotelcontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0576D535-2229-4D4A-A92B-6671E9929BFF}|BookAHotel.Test\\BookAHotel.Test.csproj|solutionrelative:bookahotel.test\\controller\\bookahotelcontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0576D535-2229-4D4A-A92B-6671E9929BFF}|BookAHotel.Test\\BookAHotel.Test.csproj|c:\\users\\intern.pmquang1\\c#\\bookahotel\\bookahotel.test\\repository\\bookahotelrepositorytests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -150,7 +154,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 372,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
@@ -168,7 +172,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "BookingService.cs",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\BookAHotel\\BookAHotel\\Service\\BookingService.cs",
               "RelativeDocumentMoniker": "BookAHotel\\Service\\BookingService.cs",
@@ -177,12 +181,11 @@
               "ViewState": "AQIAACAAAAAAAAAAAAAAABkAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-17T03:19:25.507Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "BookingRepository.cs",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\BookAHotel\\BookAHotel\\Repository\\BookingRepository.cs",
               "RelativeDocumentMoniker": "BookAHotel\\Repository\\BookingRepository.cs",
@@ -191,12 +194,11 @@
               "ViewState": "AQIAAAYAAAAAAAAAAAAIwA4AAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-12T03:32:44.249Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "IRepository.cs",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\BookAHotel\\BookAHotel\\Repository\\IRepository\\IRepository.cs",
               "RelativeDocumentMoniker": "BookAHotel\\Repository\\IRepository\\IRepository.cs",
@@ -205,12 +207,11 @@
               "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-17T07:50:56.664Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Repository.cs",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\BookAHotel\\BookAHotel\\Repository\\Repository.cs",
               "RelativeDocumentMoniker": "BookAHotel\\Repository\\Repository.cs",
@@ -219,12 +220,24 @@
               "ViewState": "AQIAABMAAAAAAAAAAAAcwBwAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-12T07:43:47.653Z",
-              "IsPinned": true,
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "IFindRepository.cs",
+              "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\BookAHotel\\BookAHotel\\Repository\\IRepository\\IFindRepository.cs",
+              "RelativeDocumentMoniker": "BookAHotel\\Repository\\IRepository\\IFindRepository.cs",
+              "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\BookAHotel\\BookAHotel\\Repository\\IRepository\\IFindRepository.cs",
+              "RelativeToolTip": "BookAHotel\\Repository\\IRepository\\IFindRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T09:14:55.041Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "ClientRepository.cs",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\BookAHotel\\BookAHotel\\Repository\\ClientRepository.cs",
               "RelativeDocumentMoniker": "BookAHotel\\Repository\\ClientRepository.cs",
@@ -232,12 +245,11 @@
               "RelativeToolTip": "BookAHotel\\Repository\\ClientRepository.cs",
               "ViewState": "AQIAAAcAAAAAAAAAAAAuwBkAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-12T03:26:38.016Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-12T03:26:38.016Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\BookAHotel\\BookAHotel\\Program.cs",
               "RelativeDocumentMoniker": "BookAHotel\\Program.cs",
@@ -245,12 +257,11 @@
               "RelativeToolTip": "BookAHotel\\Program.cs",
               "ViewState": "AQIAAAcAAAAAAAAAAAAkwCMAAABIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T02:25:48.667Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-11T02:25:48.667Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "HotelBookingContext.cs",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\BookAHotel\\BookAHotel\\Data\\HotelBookingContext.cs",
               "RelativeDocumentMoniker": "BookAHotel\\Data\\HotelBookingContext.cs",
@@ -258,12 +269,11 @@
               "RelativeToolTip": "BookAHotel\\Data\\HotelBookingContext.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAqwBYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T01:52:18.453Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-11T01:52:18.453Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "RoomRepository.cs",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\BookAHotel\\BookAHotel\\Repository\\RoomRepository.cs",
               "RelativeDocumentMoniker": "BookAHotel\\Repository\\RoomRepository.cs",
@@ -271,12 +281,11 @@
               "RelativeToolTip": "BookAHotel\\Repository\\RoomRepository.cs",
               "ViewState": "AQIAAAsAAAAAAAAAAAAQwBIAAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-12T03:55:02.471Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-12T03:55:02.471Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "RoomType.cs",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\BookAHotel\\BookAHotel\\Models\\RoomType.cs",
               "RelativeDocumentMoniker": "BookAHotel\\Models\\RoomType.cs",
@@ -284,12 +293,11 @@
               "RelativeToolTip": "BookAHotel\\Models\\RoomType.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-12T11:11:34.05Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-12T11:11:34.05Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "SeedData.cs",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\BookAHotel\\BookAHotel\\Models\\SeedData.cs",
               "RelativeDocumentMoniker": "BookAHotel\\Models\\SeedData.cs",
@@ -297,12 +305,11 @@
               "RelativeToolTip": "BookAHotel\\Models\\SeedData.cs",
               "ViewState": "AQIAAAwAAAAAAAAAAAAAACIAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T11:01:38.615Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-10T11:01:38.615Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "RoomService.cs",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\BookAHotel\\BookAHotel\\Service\\RoomService.cs",
               "RelativeDocumentMoniker": "BookAHotel\\Service\\RoomService.cs",
@@ -310,12 +317,11 @@
               "RelativeToolTip": "BookAHotel\\Service\\RoomService.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAqwBsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-12T06:39:19.121Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-12T06:39:19.121Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\BookAHotel\\BookAHotel\\appsettings.json",
               "RelativeDocumentMoniker": "BookAHotel\\appsettings.json",
@@ -323,12 +329,11 @@
               "RelativeToolTip": "BookAHotel\\appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAADAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-06-11T04:14:20.13Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-11T04:14:20.13Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "Booking.cs",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\BookAHotel\\BookAHotel\\Models\\Booking.cs",
               "RelativeDocumentMoniker": "BookAHotel\\Models\\Booking.cs",
@@ -336,12 +341,11 @@
               "RelativeToolTip": "BookAHotel\\Models\\Booking.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAqwBUAAABtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T01:48:15.145Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-11T01:48:15.145Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "BookAHotel.http",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\BookAHotel\\BookAHotel\\BookAHotel.http",
               "RelativeDocumentMoniker": "BookAHotel\\BookAHotel.http",
@@ -349,12 +353,11 @@
               "RelativeToolTip": "BookAHotel\\BookAHotel.http",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2024-06-11T02:45:56.503Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-11T02:45:56.503Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "ClientService.cs",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\BookAHotel\\BookAHotel\\Service\\ClientService.cs",
               "RelativeDocumentMoniker": "BookAHotel\\Service\\ClientService.cs",
@@ -362,12 +365,11 @@
               "RelativeToolTip": "BookAHotel\\Service\\ClientService.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAuwBYAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-12T02:58:56.736Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-12T02:58:56.736Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "Client.cs",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\BookAHotel\\BookAHotel\\Models\\Client.cs",
               "RelativeDocumentMoniker": "BookAHotel\\Models\\Client.cs",
@@ -375,12 +377,11 @@
               "RelativeToolTip": "BookAHotel\\Models\\Client.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAqwBAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T11:07:23.013Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-10T11:07:23.013Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "Room.cs",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\BookAHotel\\BookAHotel\\Models\\Room.cs",
               "RelativeDocumentMoniker": "BookAHotel\\Models\\Room.cs",
@@ -388,12 +389,11 @@
               "RelativeToolTip": "BookAHotel\\Models\\Room.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAqwBUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T10:46:38.753Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-10T10:46:38.753Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 35,
               "Title": "20240617020842_typeConversion.cs",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\BookAHotel\\BookAHotel\\Migrations\\20240617020842_typeConversion.cs",
               "RelativeDocumentMoniker": "BookAHotel\\Migrations\\20240617020842_typeConversion.cs",
@@ -401,12 +401,11 @@
               "RelativeToolTip": "BookAHotel\\Migrations\\20240617020842_typeConversion.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAIBJwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-17T02:08:42.566Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-17T02:08:42.566Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "IRoomService.cs",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\BookAHotel\\BookAHotel\\Service\\IService\\IRoomService.cs",
               "RelativeDocumentMoniker": "BookAHotel\\Service\\IService\\IRoomService.cs",
@@ -414,12 +413,11 @@
               "RelativeToolTip": "BookAHotel\\Service\\IService\\IRoomService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-12T06:54:27.858Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-12T06:54:27.858Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "Log4netExtensions.cs",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\BookAHotel\\BookAHotel\\Logs\\Log4netExtensions.cs",
               "RelativeDocumentMoniker": "BookAHotel\\Logs\\Log4netExtensions.cs",
@@ -427,12 +425,11 @@
               "RelativeToolTip": "BookAHotel\\Logs\\Log4netExtensions.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAACBAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-11T09:33:01.481Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-11T09:33:01.481Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 33,
               "Title": "20240612104714_update.cs",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\BookAHotel\\BookAHotel\\Migrations\\20240612104714_update.cs",
               "RelativeDocumentMoniker": "BookAHotel\\Migrations\\20240612104714_update.cs",
@@ -440,12 +437,11 @@
               "RelativeToolTip": "BookAHotel\\Migrations\\20240612104714_update.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-12T10:47:14.69Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-12T10:47:14.69Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 34,
               "Title": "20240612104910_init.cs",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\BookAHotel\\BookAHotel\\Migrations\\20240612104910_init.cs",
               "RelativeDocumentMoniker": "BookAHotel\\Migrations\\20240612104910_init.cs",
@@ -453,12 +449,11 @@
               "RelativeToolTip": "BookAHotel\\Migrations\\20240612104910_init.cs",
               "ViewState": "AQIAAAsAAAAAAAAAAAAQwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-12T10:49:10.218Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-12T10:49:10.218Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "IClientService.cs",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\BookAHotel\\BookAHotel\\Service\\IService\\IClientService.cs",
               "RelativeDocumentMoniker": "BookAHotel\\Service\\IService\\IClientService.cs",
@@ -466,12 +461,11 @@
               "RelativeToolTip": "BookAHotel\\Service\\IService\\IClientService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAqwAoAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-12T06:54:18.072Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-12T06:54:18.072Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "BookAHotel.csproj",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\BookAHotel\\BookAHotel\\BookAHotel.csproj",
               "RelativeDocumentMoniker": "BookAHotel\\BookAHotel.csproj",
@@ -479,12 +473,11 @@
               "RelativeToolTip": "BookAHotel\\BookAHotel.csproj",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAABPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-06-11T07:57:17.267Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-11T07:57:17.267Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "test.cs",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\BookAHotel\\BookAHotel\\Controllers\\test.cs",
               "RelativeDocumentMoniker": "BookAHotel\\Controllers\\test.cs",
@@ -492,24 +485,22 @@
               "RelativeToolTip": "BookAHotel\\Controllers\\test.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACMAAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-12T06:47:55.47Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-12T06:47:55.47Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 28,
               "Title": "BookAHotel",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\BookAHotel\\BookAHotel\\BookAHotel.csproj",
               "RelativeDocumentMoniker": "BookAHotel\\BookAHotel.csproj",
               "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\BookAHotel\\BookAHotel\\BookAHotel.csproj",
               "RelativeToolTip": "BookAHotel\\BookAHotel.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-06-12T02:56:26.916Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-12T02:56:26.916Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 29,
               "Title": "log4net.config",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\BookAHotel\\BookAHotel\\Logs\\log4net.config",
               "RelativeDocumentMoniker": "BookAHotel\\Logs\\log4net.config",
@@ -517,12 +508,11 @@
               "RelativeToolTip": "BookAHotel\\Logs\\log4net.config",
               "ViewState": "AQIAABIAAAAAAAAAAABRwBUAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-06-11T07:34:43.553Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-11T07:34:43.553Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 30,
               "Title": "serviceDependencies.json",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\BookAHotel\\BookAHotel\\Properties\\serviceDependencies.json",
               "RelativeDocumentMoniker": "BookAHotel\\Properties\\serviceDependencies.json",
@@ -530,12 +520,11 @@
               "RelativeToolTip": "BookAHotel\\Properties\\serviceDependencies.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-06-11T04:19:45.26Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-11T04:19:45.26Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 31,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\BookAHotel\\BookAHotel\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "BookAHotel\\Properties\\launchSettings.json",
@@ -543,12 +532,11 @@
               "RelativeToolTip": "BookAHotel\\Properties\\launchSettings.json",
               "ViewState": "AQIAAAcAAAAAAAAAAABhwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-06-11T04:17:26.805Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-11T04:17:26.805Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 32,
               "Title": "20240611070445_changebooking1.cs",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\BookAHotel\\BookAHotel\\Migrations\\20240611070445_changebooking1.cs",
               "RelativeDocumentMoniker": "BookAHotel\\Migrations\\20240611070445_changebooking1.cs",
@@ -565,7 +553,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "BookAHotelControllerTests.cs",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\BookAHotel\\BookAHotel.Test\\Controller\\BookAHotelControllerTests.cs",
               "RelativeDocumentMoniker": "BookAHotel.Test\\Controller\\BookAHotelControllerTests.cs",
@@ -578,7 +566,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "UnitTest1.cs",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\BookAHotel\\BookAHotel.Test\\UnitTest1.cs",
               "RelativeDocumentMoniker": "BookAHotel.Test\\UnitTest1.cs",
@@ -586,12 +574,11 @@
               "RelativeToolTip": "BookAHotel.Test\\UnitTest1.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-17T08:31:33.442Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-17T08:31:33.442Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "BookAHotelRepositoryTests.cs",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\BookAHotel\\BookAHotel.Test\\Repository\\BookAHotelRepositoryTests.cs",
               "RelativeDocumentMoniker": "BookAHotel.Test\\Repository\\BookAHotelRepositoryTests.cs",
@@ -599,21 +586,19 @@
               "RelativeToolTip": "BookAHotel.Test\\Repository\\BookAHotelRepositoryTests.cs",
               "ViewState": "AQIAAEMAAAAAAAAAAAAgwGEAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-17T07:36:14.63Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-17T07:36:14.63Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "BookAHotel.Test",
+              "DocumentIndex": 7,
+              "Title": "BookAHotel.Test.csproj",
               "DocumentMoniker": "C:\\Users\\intern.pmquang1\\C#\\BookAHotel\\BookAHotel.Test\\BookAHotel.Test.csproj",
               "RelativeDocumentMoniker": "BookAHotel.Test\\BookAHotel.Test.csproj",
               "ToolTip": "C:\\Users\\intern.pmquang1\\C#\\BookAHotel\\BookAHotel.Test\\BookAHotel.Test.csproj",
               "RelativeToolTip": "BookAHotel.Test\\BookAHotel.Test.csproj",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-06-17T08:17:30.894Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-17T08:17:30.894Z"
             }
           ]
         }
