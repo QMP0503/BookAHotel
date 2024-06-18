@@ -41,6 +41,8 @@ builder.Services.AddScoped<IClientService, ClientService>();
 builder.Services.AddScoped<IBookingService, BookingService>();
 builder.Services.AddScoped<IRoomService, RoomService>();
 
+builder.Services.AddAutoMapper(typeof(Program));
+
 builder.Services.AddLog4net();
 
 var app = builder.Build();

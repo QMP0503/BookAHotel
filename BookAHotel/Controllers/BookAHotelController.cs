@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Security.AccessControl;
+using System.Data;
+using AutoMapper;
 
 namespace BookAHotel.Controllers
 {
@@ -18,27 +20,29 @@ namespace BookAHotel.Controllers
         private readonly IRoomService _roomService;
         private readonly IBookingService _bookingService;
         private readonly ILog _logger;
-
-        public BookAHotelController(IBookingService bookingService, IClientService clientService, IRoomService roomService, ILog log)
+        private readonly IMapper _mapper;
+        public BookAHotelController(IBookingService bookingService, IClientService clientService, IRoomService roomService, ILog log, IMapper mapper)
         {
             _logger = log;
             _bookingService = bookingService;
             _clientService = clientService;
             _roomService = roomService;
+            _mapper = mapper;
         }
         [HttpGet("AllBooking")]
         public JsonResult GetAllBooking()
         {
             try
             {
-                var bookingList = _bookingService.ListBooking(null);
+                var bookingList = _bookingService.ListBooking();
+                if (bookingList == null || bookingList.Count == 0) throw new Exception("No booking found");
                 return new JsonResult(bookingList);
             }catch(Exception ex)
             {
                 _logger.Error(ex.Message);
                 return new JsonResult("Error. Try Again");
             }
-        }
+        }                                                                                   
 
         [HttpGet("booking")]
         public JsonResult GetBooking(string ClientName) 
@@ -97,6 +101,24 @@ namespace BookAHotel.Controllers
             }
             
         }
+        [HttpGet("RoomHistory")]
+        public JsonResult GetRoomHistory(string RoomName)
+        {
+            try
+            {
+                var roomHistory = _roomService.RoomHistory(RoomName);
+                if (roomHistory == null)
+                {
+                    throw new NullReferenceException(RoomName + "not found. Invalid value entered");
+                }
+                return new JsonResult(roomHistory);
+            }
+            catch (Exception ex)
+            {
+                _logger.Error(ex.Message);
+                return new JsonResult("Error. Try Again");
+            }
+        }
         [HttpPost("addClient")]
         public JsonResult AddClient(string Name)
         {
@@ -118,7 +140,7 @@ namespace BookAHotel.Controllers
             try
             {
                 _bookingService.AddBooking(ClientName, RoomName, checkInDate, checkOutDate, discount);
-                _bookingService.Save();
+                //_bookingService.Save();
                 return new JsonResult("booking added");
             }
             catch (Exception ex)

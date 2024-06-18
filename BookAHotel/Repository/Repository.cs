@@ -4,6 +4,7 @@ using BookAHotel.Repository.IRepository;
 using log4net;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
+using ZstdSharp.Unsafe;
 
 namespace BookAHotel.Repository
 {
@@ -29,15 +30,25 @@ namespace BookAHotel.Repository
         }
         public void Update(T entity)
         {
-            _context.Entry(entity).State = EntityState.Modified; //update status to be changed when savechanges is called
+            try
+            {
+                //update status to be changed when savechanges is called
+                _context.Update(entity);
+                _context.SaveChanges();
+            }
+            catch (Exception ex) {_logger.Error(ex); }
         }
         public void Delete(T entity)
         {
-            if(_context.Entry(entity).State == EntityState.Detached)
+            try
             {
-                _dbSet.Attach(entity);
+                if (_context.Entry(entity).State == EntityState.Detached)
+                {
+                    _dbSet.Attach(entity);
+                }
+                _dbSet.Remove(entity);
             }
-            _dbSet.Remove(entity);
+            catch (Exception ex) {_logger.Error(ex); }
         }
         public void Save()
         {

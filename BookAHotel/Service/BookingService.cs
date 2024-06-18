@@ -9,36 +9,40 @@ namespace BookAHotel.Service
     {
         private readonly IRepository<Booking> _Repository;
         private readonly IRepository<Client> _RepositoryClient;
+        private readonly IRepository<Room> _RepositoryRoom;
         private readonly IFindRepository<Booking> _BookingRepository;
         private readonly IFindRepository<Room> _RoomRepository;
         private readonly IFindRepository<Client> _ClientRepository;
-        public BookingService(IRepository<Client> repositoryClient,IRepository<Booking> Repository, IFindRepository<Booking> bookingRepository, IFindRepository<Room> roomRepository, IFindRepository<Client> clientRepository)
+        public BookingService(IRepository<Client> repositoryClient,IRepository<Booking> Repository, IFindRepository<Booking> bookingRepository, IFindRepository<Room> roomRepository, IFindRepository<Client> clientRepository, IRepository<Room> repositoryRoom)
         {
             _Repository = Repository;
             _BookingRepository = bookingRepository;
             _RoomRepository = roomRepository;
             _ClientRepository = clientRepository;
             _RepositoryClient = repositoryClient;
+            _RepositoryRoom = repositoryRoom;
         }
         public Booking FindBooking(string ClientName)
         {
             if (ClientName == null) { throw new NullReferenceException("Client Not Found"); }
             return _BookingRepository.FindBy(x => x.Client.Name == ClientName && x.Status == "Booked");
         }
-        public List<Booking> ListBooking(string? RoomName) 
+        public List<Booking> ListBooking() 
         {
-            if (RoomName == null) { return _BookingRepository.ListBy(x => true); }
-            return _BookingRepository.ListBy(x => x.Room.Name == RoomName);
+            return _BookingRepository.ListBy(x => true); //change to get alll
+
         }
-        public void AddBooking(string ClientName, string RoomName, string checkInDate, string checkOutDate, double discount)
+        public void AddBooking(string ClientName, string RoomName, string checkInDate, string checkOutDate, double discount) //store param in object (put in object if more than 3)
         {
             if(ClientName == null || RoomName == null || checkInDate == null || checkOutDate == null) { throw new Exception("Not All Fields are filled"); }
             var checkIn = DateTime.Parse(checkInDate);
             var checkOut = DateTime.Parse(checkOutDate);
             if (checkIn > checkOut) { throw new Exception("CheckOutDate must be greater than CheckInDate"); }
             var client = _ClientRepository.FindBy(x=> x.Name == ClientName);
-            var room = _RoomRepository.FindBy(x => x.Name == RoomName);
-            if (room == null) { throw new Exception("Room Not Found"); }
+            var room = _RoomRepository.FindBy(x => x.Name == RoomName && x.IsAvailable == true);
+            if (room == null) { throw new Exception("Room Not Found or Not Available"); }
+            room.IsAvailable = false;
+            _RepositoryRoom.Update(room);
             if (client == null) 
             {
                 var newClient = new Client
@@ -61,6 +65,8 @@ namespace BookAHotel.Service
                 Status = "Booked"
             };
             _Repository.Add(booking);
+
+
         }
         public void UpdateBooking(string ClientName, string? RoomName, string? checkInDate, string? checkOutDate)
         {
@@ -88,8 +94,11 @@ namespace BookAHotel.Service
             booking.Status = "Cancelled";
             var client = _ClientRepository.FindBy(x => x.Name == ClientName);
             client.Status = "Not Booked";
+            var room = _RoomRepository.FindBy(x => x.Id == booking.RoomId);
+            room.IsAvailable=true;
             _Repository.Update(booking);
             _RepositoryClient.Update(client);
+            _RepositoryRoom.Update(room);
         }
         public void Save()
         {

@@ -1,19 +1,23 @@
-﻿namespace BookAHotel.Models
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+using System.Runtime.Serialization;
+
+namespace BookAHotel.Models
 {
     public class RoomType
     {
-        public int Id { get; set; } 
-        public RoomTypeNameEnum RoomTypeName { get; set; } = RoomTypeNameEnum.Normal;
+        public int Id { get; set; }
+        [DisplayName("Room Type Name")]
+        public RoomTypeNameEnum RoomTypeName { get; set; }
         public int Price { get; set; } //only for the room
         public ICollection<Room> Rooms { get; set; } 
 
     }
     public enum RoomTypeNameEnum
     {
-        Queen =0,
-        Normal =1,
-        King =2,
-        President=3,
+        Queen,
+        Normal,
+        King,
+        President
     }
-
 }
