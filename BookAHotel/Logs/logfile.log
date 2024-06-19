@@ -196,3 +196,6 @@
    at Microsoft.EntityFrameworkCore.DbContext.SetEntityState[TEntity](TEntity entity, EntityState entityState)
    at Microsoft.EntityFrameworkCore.DbContext.Update[TEntity](TEntity entity)
    at BookAHotel.Repository.Repository`1.Update(T entity) in C:\Users\intern.pmquang1\C#\BookAHotel\BookAHotel\Repository\Repository.cs:line 31
+2024-06-19 11:27:53,992 [10] ERROR Program - Unknown column 'Price' in 'order clause'
+2024-06-19 11:28:08,082 [5] ERROR Program - Unknown column 'price' in 'order clause'
+2024-06-19 11:28:34,812 [5] ERROR Program - Table 'hotelbooking.tablename' doesn't exist

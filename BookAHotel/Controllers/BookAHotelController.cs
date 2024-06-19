@@ -20,15 +20,63 @@ namespace BookAHotel.Controllers
         private readonly IRoomService _roomService;
         private readonly IBookingService _bookingService;
         private readonly ILog _logger;
-        private readonly IMapper _mapper;
-        public BookAHotelController(IBookingService bookingService, IClientService clientService, IRoomService roomService, ILog log, IMapper mapper)
+        private readonly IStoreProceduresService _storeProceduresService;
+        public BookAHotelController(IBookingService bookingService, IClientService clientService, IRoomService roomService, ILog log, IStoreProceduresService storeProceduresService)
         {
             _logger = log;
             _bookingService = bookingService;
             _clientService = clientService;
             _roomService = roomService;
-            _mapper = mapper;
+            _storeProceduresService = storeProceduresService;
         }
+        [HttpGet("SortBooking")]
+        public JsonResult SortBooking(string sortBy, string columnName)
+        {
+            try
+            {
+                var bookingList = _storeProceduresService.DbBookingSorting(sortBy, columnName);
+                if (bookingList == null || bookingList.Count == 0) throw new Exception("No booking found");
+                return new JsonResult(bookingList);
+            }
+            catch(Exception ex)
+            {
+                _logger.Error(ex.Message);
+                return new JsonResult("Error. Try Again");
+            }
+        }
+        [HttpGet("PageRoom")]
+        public JsonResult PageRoom(int pageNumber, int pageSize)
+        {
+            try
+            {
+                var roomList = _storeProceduresService.DbRoomPaging(pageNumber, pageSize);
+                if (roomList == null || roomList.Count == 0) throw new Exception("No room found");
+                return new JsonResult(roomList);
+            }
+            catch (Exception ex) 
+            {
+                _logger.Error(ex.Message);
+                return new JsonResult("Error. Try Again");
+            }
+        }
+        [HttpGet("SearchRoom")]
+        public JsonResult SearchRoom(string RoomName)
+        {
+            try
+            {
+                var roomList = _storeProceduresService.DbRoomSearching(RoomName);
+                if (roomList == null || roomList.Count == 0)
+                {
+                    throw new NullReferenceException(RoomName + "not found. Invalid value entered");
+                }
+                return new JsonResult(roomList);
+            }catch(Exception ex)
+            {
+                _logger.Error(ex.Message);
+                return new JsonResult("Error. Try Again");
+            }
+        }
+
         [HttpGet("AllBooking")]
         public JsonResult GetAllBooking()
         {

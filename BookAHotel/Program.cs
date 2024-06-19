@@ -11,7 +11,9 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Org.BouncyCastle.Pkix;
 using System.Text.Json;
+using Dapper;
 using System.Text.Json.Serialization;
+using MySql.Data.MySqlClient;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -31,7 +33,11 @@ builder.Services.AddControllers().AddJsonOptions(options =>
 });
 
 builder.Services.AddDbContext<HotelBookingContext>(options =>
-options.UseMySQL("Server=localhost;Database=hotelbooking;User=root;Password=Munmeo0503.;"));    
+options.UseMySQL("Server=localhost;Database=hotelbooking;User=root;Password=Munmeo0503.;"));
+
+builder.Services.AddSingleton<DapperContext>();
+builder.Services.AddControllers();
+
 
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 builder.Services.AddScoped<IFindRepository<Client>,ClientRepository>();
@@ -40,6 +46,7 @@ builder.Services.AddScoped<IFindRepository<Room>, RoomRepository>();
 builder.Services.AddScoped<IClientService, ClientService>();
 builder.Services.AddScoped<IBookingService, BookingService>();
 builder.Services.AddScoped<IRoomService, RoomService>();
+builder.Services.AddScoped<IStoreProceduresService, StoreProceduresService>();
 
 builder.Services.AddAutoMapper(typeof(Program));
 
