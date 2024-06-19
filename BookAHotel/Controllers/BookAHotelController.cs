@@ -102,14 +102,13 @@ namespace BookAHotel.Controllers
                 {
                     throw new NullReferenceException($"Booking not found. Value entered {ClientName}");
                 }
-                return new JsonResult($"{booking.Client.Name} booked {booking.Room.Name} from {booking.startDate} to {booking.endDate}");
+                return new JsonResult($"{booking.Client.Name} booked {booking.Room.Name} from {booking.startDate} to {booking.endDate} and payment status is {booking.PaymentStatus}");
             }
             catch (NullReferenceException ex)
             {
                 _logger.Error(ex.Message);
                 return new JsonResult("Error. Booking not found. Try Again");
             }
-            
         }
         [HttpGet("client")]
         public JsonResult GetClient(string ClientName) 
@@ -167,13 +166,35 @@ namespace BookAHotel.Controllers
                 return new JsonResult("Error. Try Again");
             }
         }
+        [HttpPost("BookingPayment")] //make for client to have an extra column. 
+        public JsonResult BookingPayment(string ClientName, int cardNumber)
+        {
+            try
+            {
+                if(cardNumber<0) throw new Exception("Invalid value entered");
+                var client = _clientService.FindClient(ClientName);
+                if (client == null)
+                {
+                    throw new NullReferenceException(ClientName + "not found. Invalid value entered");
+                }
+                if (client.CardNumber == null) _clientService.AddPayment(client, cardNumber);
+                _bookingService.UpdatePaymentStatus(ClientName);
+                _clientService.Save();
+                return new JsonResult("payment added");
+            }
+            catch(Exception ex)
+            {
+                _logger.Error(ex.Message);
+                return new JsonResult($"Error. Try Again. {ex.Message}");
+            }
+        }
+
         [HttpPost("addClient")]
         public JsonResult AddClient(string Name)
         {
             try
             {
                 _clientService.AddClient(Name);
-                //_clientService.Save();
                 return new JsonResult("client added");
             }
             catch (Exception ex)

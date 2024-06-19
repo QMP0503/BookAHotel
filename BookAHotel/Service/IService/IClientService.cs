@@ -13,6 +13,7 @@ namespace BookAHotel.Service.IService
         public List<Client> ListClientByStatus(string Status);
         public void UpdateClient(string Name, string Status, string? newName);
         public void DeleteClient(string Name);
+        public void AddPayment(Client client, int CardNumber);
         public void Save();
     
 

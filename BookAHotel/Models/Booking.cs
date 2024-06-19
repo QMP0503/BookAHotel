@@ -21,5 +21,6 @@ namespace BookAHotel.Models
         public double TotalPrice { get; set; }
         [AllowedValues(typeof(string), new string[] { "Booked", "Cancelled", "CheckedIn", "CheckedOut", "N/A" })]
         public string Status { get; set; }
+        public bool PaymentStatus { get; set; }
     }
 }

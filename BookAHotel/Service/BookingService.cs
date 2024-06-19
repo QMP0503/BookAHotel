@@ -61,8 +61,9 @@ namespace BookAHotel.Service
                 RoomId = room.Id,
                 startDate = checkIn,
                 endDate = checkOut,
-                TotalPrice = room.RoomType.Price *(1-(discount/100))*1.20, //discount plus VAT
-                Status = "Booked"
+                TotalPrice = room.RoomType.Price * (1 - (discount / 100)) * 1.20, //discount plus VAT
+                Status = "Booked",
+                PaymentStatus = false              
             };
             _Repository.Add(booking);
 
@@ -99,6 +100,14 @@ namespace BookAHotel.Service
             _Repository.Update(booking);
             _RepositoryClient.Update(client);
             _RepositoryRoom.Update(room);
+        }
+        public void UpdatePaymentStatus(string ClientName)
+        {
+            var booking = FindBooking(ClientName);
+            if(booking == null) { throw new Exception("Booking Not Found"); }
+            if(booking.PaymentStatus == true) { throw new Exception("Booking Already Paid"); }
+            booking.PaymentStatus = true;
+            _Repository.Update(booking);
         }
         public void Save()
         {

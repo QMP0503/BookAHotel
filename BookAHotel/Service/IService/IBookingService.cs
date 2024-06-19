@@ -10,6 +10,7 @@ namespace BookAHotel.Service.IService
         public void AddBooking(string ClientName, string RoomName, string checkInDate, string checkOutDate, double discount);
         public void UpdateBooking(string ClientName, string RoomName, string checkInDate, string checkOutDate);
         public void CancelBooking(string ClientName);
+        public void UpdatePaymentStatus(string ClientName);
         public void Save();
     }
 }

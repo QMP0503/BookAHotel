@@ -44,6 +44,12 @@ namespace BookAHotel.Service
             var client = FindClient(Name);
             _Repository.Delete(client);
         }
+        public void AddPayment(Client client, int CardNumber)
+        {
+            client.CardNumber = CardNumber;
+            _Repository.Update(client);
+
+        }
         public void Save()
         {
             _Repository.Save();

@@ -147,3 +147,4 @@ C:\Users\intern.pmquang1\C#\BookAHotel\BookAHotel.Test\obj\Debug\net8.0\refint\B
 C:\Users\intern.pmquang1\C#\BookAHotel\BookAHotel.Test\obj\Debug\net8.0\BookAHotel.Test.pdb
 C:\Users\intern.pmquang1\C#\BookAHotel\BookAHotel.Test\obj\Debug\net8.0\BookAHotel.Test.genruntimeconfig.cache
 C:\Users\intern.pmquang1\C#\BookAHotel\BookAHotel.Test\obj\Debug\net8.0\ref\BookAHotel.Test.dll
+C:\Users\intern.pmquang1\C#\BookAHotel\BookAHotel.Test\bin\Debug\net8.0\Dapper.dll

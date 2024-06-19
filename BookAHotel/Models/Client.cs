@@ -9,8 +9,8 @@ namespace BookAHotel.Models
         public int Id { get; set; }
         public string Name { get; set; }
         public ICollection<Booking>? Booking { get; set; } = null;
-        
         [AllowedValues(typeof(string), new string[] { "Booked", "Not Booked", "CheckedIn", "CheckedOut", "N/A"})]
         public string Status { get; set; } = "N/A"; //default value
+        public int CardNumber { get; set; } 
     }
 }
